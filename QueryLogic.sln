@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBCBC798-99DC-4FFD-AF57-C9BA243C9537}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		QueryLogic.vsmdi = QueryLogic.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryLogic", "QueryLogic\QueryLogic.csproj", "{7F5857ED-DD2B-4163-8648-E4856A70936F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryLogic.ORM", "QueryLogic.ORM\QueryLogic.ORM.csproj", "{251D4A50-A3B3-46E7-865E-A1116288B964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryLogic.UnitTests", "QueryLogic.UnitTests\QueryLogic.UnitTests.csproj", "{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7F5857ED-DD2B-4163-8648-E4856A70936F}.Release|x86.ActiveCfg = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Debug|x86.Build.0 = Debug|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|x86.ActiveCfg = Release|Any CPU
+		{251D4A50-A3B3-46E7-865E-A1116288B964}.Release|x86.Build.0 = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3DA17D4-4DF4-4329-B9F3-E8B2BA3D6642}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = QueryLogic.vsmdi
+	EndGlobalSection
+EndGlobal

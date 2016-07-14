@@ -1,0 +1,31 @@
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.dll.config
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\Moq.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.Toolkit.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.ORM.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.Toolkit.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.xml
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\Moq.xml
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.Toolkit.xml
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.dll.config
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.UnitTests.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\Moq.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.ORM.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\QueryLogic.xml
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\bin\Debug\Moq.xml
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.UnitTests\obj\Debug\QueryLogic.UnitTests.pdb

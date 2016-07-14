@@ -1,0 +1,24 @@
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.XML
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.dll
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.pdb
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.csprojResolveAssemblyReference.cache
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.dll
+C:\Users\gfishilevich\Documents\Visual Studio 2013\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.pdb
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.XML
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.dll
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.pdb
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.csprojResolveAssemblyReference.cache
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.dll
+C:\Users\Greg Fish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.XML
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic\obj\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.XML
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic\obj\Debug\QueryLogic.pdb

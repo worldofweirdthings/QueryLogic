@@ -1,0 +1,19 @@
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.ORM.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.Toolkit.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.Toolkit.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.xml
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.pdb
+C:\Users\gfish\Documents\workspace\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.Toolkit.xml
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.ORM.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.pdb
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\bin\Debug\QueryLogic.xml
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.csprojResolveAssemblyReference.cache
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.dll
+C:\Users\gfish\Documents\visual studio 2015\Projects\QueryLogic\QueryLogic.ORM\obj\Debug\QueryLogic.ORM.pdb

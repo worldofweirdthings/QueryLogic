@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a database column
     /// </summary>
-    public class Column
+    internal class Column
     {
         /// <summary>
         /// Name of the database column

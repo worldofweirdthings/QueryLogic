@@ -5,7 +5,7 @@ namespace QueryLogic.ORM.SQL
     /// <summary>
     /// Represents a database table
     /// </summary>
-    public class Table
+    internal class Table
     {
         /// <summary>
         /// Name of the database where the table exists

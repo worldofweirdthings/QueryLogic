@@ -23,6 +23,16 @@ namespace QueryLogic.ORM
         IEnumerable<T> List<T>();
 
         /// <summary>
+        /// Returns all objects of the requested type from a database
+        /// in subsets intended for a paginated grid or list of data
+        /// </summary>
+        /// <typeparam name="T">Type of requested object</typeparam>
+        /// <returns>Collection of requested objects</returns>
+        /// <param name="offset">current page in zero-based format</param>
+        /// <param name="rows">number of rows to fetch for the list</param>
+        IEnumerable<T> List<T>(int offset, int rows);
+
+        /// <summary>
         /// Retrieves an object from a database based on the provided id
         /// </summary>
         /// <typeparam name="T">Type of requested object</typeparam>

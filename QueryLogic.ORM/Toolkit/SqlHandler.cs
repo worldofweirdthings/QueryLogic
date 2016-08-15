@@ -96,7 +96,7 @@ namespace QueryLogic.ORM
 
                 if (orderBy == null) throw new QueryException("Results must be ordered by a valid requested object property. This property cannot exist in an internal object.");
 
-                orderByClause = $" order by [{orderBy.Name}] {(!string.IsNullOrEmpty(search.SortOrder) ? search.SortOrder : SortOrders.Ascending)} {((search.Rows.HasValue && search.Offset.HasValue) ? $"offset {search.Offset.Value} rows fetch next {search.Rows.Value} rows only" : string.Empty)}";
+                orderByClause = $" order by [{orderBy.Name}] {(!string.IsNullOrEmpty(search.SortOrder) ? search.SortOrder : SortOrders.Ascending)} {((search.Rows.HasValue && search.Offset.HasValue) ? setPaginatedFetch(search.Offset.Value, search.Rows.Value) : string.Empty)}";
             }
 
             var whereClause = $" where{(clauseMap["or"].Length > 0 ? $" ({clauseMap["or"]} ) and" : "")}{clauseMap["and"]}";
@@ -119,15 +119,20 @@ namespace QueryLogic.ORM
         /// <returns>Collection of requested objects</returns>
         public IEnumerable<T> List<T>()
         {
-            var entity = Activator.CreateInstance<T>();
-            var table = SchemaHandler.GetTableSchema(entity);
-            var sql = new StringBuilder();
+            return list<T>(false);
+        }
 
-            sql.Append(setSelectClause(table));
-
-            var rows = queryData(sql.ToString());
-
-            return map<T>(rows, table);
+        /// <summary>
+        /// Returns all objects of the requested type from a database
+        /// in subsets intended for a paginated grid or list of data
+        /// </summary>
+        /// <typeparam name="T">Type of requested object</typeparam>
+        /// <returns>Collection of requested objects</returns>
+        /// <param name="offset">current page in zero-based format</param>
+        /// <param name="rows">number of rows to fetch for the list</param>
+        public IEnumerable<T> List<T>(int offset, int rows)
+        {
+            return list<T>(true, offset, rows);
         }
 
         /// <summary>
@@ -148,10 +153,9 @@ namespace QueryLogic.ORM
             var sql = new StringBuilder();
             var primaryKey = primaryKeys.First();
 
-            sql.AppendFormat("{0} where [{1}] in ( ", setSelectClause(table), primaryKey.Name);
+            sql.Append($"{setSelectClause(table)} where [{primaryKey.Name}] in ( ");
 
-            for (var i = 0; i < ids.Count; i++)
-                sql.AppendFormat("{0}{1}", string.Format(SqlFormat.Format(primaryKey.Type), ids[i]), (i < ids.Count - 1) ? ", " : " ) ");
+            for (var i = 0; i < ids.Count; i++) sql.Append($"{string.Format(SqlFormat.Format(primaryKey.Type), ids[i])}{((i < ids.Count - 1) ? ", " : " ) ")}");
 
             var rows = queryData(sql.ToString());
 
@@ -244,7 +248,7 @@ namespace QueryLogic.ORM
 
             var sql = new StringBuilder();
 
-            sql.AppendFormat("delete from {0} where {1}", table.Name, setPKClause(primaryKeys));
+            sql.Append($"delete from {table.Name} where {setPKClause(primaryKeys)}");
 
             modifyData(sql.ToString());
         }
@@ -299,6 +303,22 @@ namespace QueryLogic.ORM
             return output;
         }
 
+        private IEnumerable<T> list<T>(bool paged, int offet = 0, int fetch = 0)
+        {
+            var entity = Activator.CreateInstance<T>();
+            var table = SchemaHandler.GetTableSchema(entity);
+
+            var sql = new StringBuilder();
+
+            sql.Append(setSelectClause(table));
+
+            if (paged) sql.Append($" {setPaginatedFetch(offet, fetch)}");
+
+            var rows = queryData(sql.ToString());
+
+            return map<T>(rows, table);
+        }
+
         private static void map(object entity, SQL.Table table, Row row)
         {
             var properties = entity.GetType().GetProperties();
@@ -318,7 +338,7 @@ namespace QueryLogic.ORM
             var insertSql = new StringBuilder();
             var valuesSql = new StringBuilder();
 
-            insertSql.AppendFormat("insert into [{0}] ( ", table.Name);
+            insertSql.Append($"insert into [{table.Name}] ( ");
             valuesSql.Append(" values ( ");
 
             for (var i = 0; i < table.Columns.Count; i++)
@@ -327,8 +347,8 @@ namespace QueryLogic.ORM
 
                 if (column.IsPrimaryKey && column.SequenceType != SequenceTypes.Manual) continue;
 
-                insertSql.AppendFormat("[{0}]{1}", column.Name, (i < table.Columns.Count - 1) ? ", " : " ) ");
-                valuesSql.AppendFormat("{0}{1}", string.Format(SqlFormat.Format(column.Type), column.Value), (i < table.Columns.Count - 1) ? ", " : " ) ");
+                insertSql.Append($"[{column.Name}]{((i < table.Columns.Count - 1) ? ", " : " ) ")}");
+                valuesSql.Append($"{string.Format(SqlFormat.Format(column.Type), column.Value)}{((i < table.Columns.Count - 1) ? ", " : " ) ")}");
             }
 
             var sql = new StringBuilder();
@@ -346,10 +366,9 @@ namespace QueryLogic.ORM
 
             sql.Append("\nselect ");
 
-            for (var i = 0; i < autoIncrementingPKs.Count; i ++)
-                sql.AppendFormat(" max([{0}]) as [{0}]{1}", autoIncrementingPKs[i].Name, (i < autoIncrementingPKs.Count - 1) ? ", " : string.Empty);
+            for (var i = 0; i < autoIncrementingPKs.Count; i ++) sql.AppendFormat(" max([{0}]) as [{0}]{1}", autoIncrementingPKs[i].Name, (i < autoIncrementingPKs.Count - 1) ? ", " : string.Empty);
 
-            sql.AppendFormat(" from {0} ", table.Name);
+            sql.Append($" from {table.Name} ");
 
             return sql.ToString();
         }
@@ -363,10 +382,9 @@ namespace QueryLogic.ORM
             var columns = table.Columns.Where(c => !c.IsPrimaryKey && !c.CreateOnly).ToList();
             var sql = new StringBuilder();
 
-            sql.AppendFormat("update [{0}] set ", table.Name);
+            sql.Append($"update [{table.Name}] set ");
 
-            for (var i = 0; i < columns.Count; i++)
-                sql.AppendFormat("[{0}] = {1}{2} ", columns[i].Name, string.Format(SqlFormat.Format(columns[i].Type), columns[i].Value), (i < columns.Count - 1) ? ", " : string.Empty);
+            for (var i = 0; i < columns.Count; i++) sql.Append($"[{columns[i].Name}] = {string.Format(SqlFormat.Format(columns[i].Type), columns[i].Value)}{((i < columns.Count - 1) ? ", " : string.Empty)} ");
 
             sql.Append(setPKClause(primaryKeys));
 
@@ -379,19 +397,19 @@ namespace QueryLogic.ORM
 
             sql.Append("select ");
 
-            for (var i = 0; i < table.Columns.Count; i++) sql.AppendFormat("[{0}]{1}", table.Columns.ElementAt(i).Name, (i < table.Columns.Count - 1) ? ", " : string.Empty);
+            for (var i = 0; i < table.Columns.Count; i++)
+                sql.Append($"[{table.Columns.ElementAt(i).Name}]{((i < table.Columns.Count - 1) ? ", " : string.Empty)}");
 
-            sql.AppendFormat(" from [{0}] ", table.Name);
+            sql.Append($" from [{table.Name}] ");
 
             return sql.ToString();
         }
-
+        
         private static string setPKClause(IReadOnlyList<SQL.Column> primaryKeys)
         {
             var sql = new StringBuilder();
 
-            for (var i = 0; i < primaryKeys.Count; i++)
-                sql.AppendFormat(" {0}[{1}] = {2}", (i == 0) ? " where " : " and ", primaryKeys[i].Name, string.Format(SqlFormat.Format(primaryKeys[i].Type), primaryKeys[i].Value));
+            for (var i = 0; i < primaryKeys.Count; i++) sql.Append($" {((i == 0) ? " where " : " and ")}[{primaryKeys[i].Name}] = {string.Format(SqlFormat.Format(primaryKeys[i].Type), primaryKeys[i].Value)}");
 
             return sql.ToString();
         }
@@ -400,7 +418,8 @@ namespace QueryLogic.ORM
         {
             var sql = new StringBuilder();
 
-            for (var i = 0; i < primaryKeys.Count; i++) sql.AppendFormat(" [{0}]{1} ", primaryKeys[i].Name, (i < primaryKeys.Count - 1 ? "," : string.Empty));
+            for (var i = 0; i < primaryKeys.Count; i++)
+                sql.Append($" [{primaryKeys[i].Name}]{(i < primaryKeys.Count - 1 ? "," : string.Empty)} ");
 
             return sql.ToString();
         }
@@ -417,6 +436,13 @@ namespace QueryLogic.ORM
         private static List<SQL.Column> getPrimaryKeys(SQL.Table table)
         {
             return table.Columns.Where(c => c.IsPrimaryKey).ToList();
+        }
+
+        private static string setPaginatedFetch(int offset, int rows)
+        {
+            if (rows < 1) throw new QueryException("Paginated searches and list must specify a valid number of rows (one or more) to fetch.");
+
+            return $"offset {offset} rows fetch next {rows} rows only";
         }
 
         private IEnumerable<Row> queryData(string sql)

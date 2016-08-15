@@ -8,7 +8,7 @@
         /// <summary>
         /// Microsoft SQL.
         /// </summary>
-        public const string MSSQL = "sqlclient";
+        public const string MSSQL = "sql";
 
         /// <summary>
         /// Oracle.

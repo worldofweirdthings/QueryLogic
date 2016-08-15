@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace QueryLogic.ORM
 {
@@ -11,6 +10,8 @@ namespace QueryLogic.ORM
     /// </summary>
     internal static class SchemaHandler
     {
+        private static Dictionary<string, SQL.Table> _cache => new Dictionary<string, SQL.Table>();
+        
         /// <summary>
         /// Generates a representation of a database table from an entity's attributes
         /// </summary>
@@ -26,6 +27,8 @@ namespace QueryLogic.ORM
                 EntityName = entityType.Name,
                 Columns = new List<SQL.Column>()
             };
+
+            if (_cache.ContainsKey(table.Name)) return _cache[table.Name];
 
             foreach (var property in entityType.GetProperties())
             {
@@ -71,6 +74,8 @@ namespace QueryLogic.ORM
                 
                 table.Columns.Add(column);
             }
+
+            _cache.Add(table.Name, table);
 
             return table;
         }
